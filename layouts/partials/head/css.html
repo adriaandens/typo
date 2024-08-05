@@ -23,4 +23,11 @@ $combined := $CSS
 | fingerprint
 }}
 
+{{ $lichtdoos := resources.Get "css/lightbox.css" }}
+
 <link rel="stylesheet" href="{{ $combined.RelPermalink }}" media="all">
+<link rel="stylesheet" href="{{ $lichtdoos.RelPermalink }}" media="all">
+<style>
+.lichtdoos_afb { display: inline; }
+.lichtdoos_subtitle { text-align: center; font-style: italic; font-size: 0.8em; margin-top: 0px; }
+</style>

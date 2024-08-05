@@ -1,0 +1,19 @@
+<div class="lichtdoos_gallerij">
+{{ $gallerij_naam := .Get "title" }}
+{{ $gallerij_subtitel := .Get "subtitle" }}
+{{ $gallerij_folder := .Get "folder" }}
+{{ $dir := print $gallerij_folder "/*"}}
+{{ if $gallerij_naam }}
+<h3>{{ $gallerij_naam }}</h3>
+{{ end }}
+{{ $image := (.Page.Resources.ByType "image").Match $dir }}
+{{ with $image }}
+    {{ range . }}
+    {{ $resized := .Fill "150x115 q20" }}
+    <a href="{{ .Permalink }}" data-lightbox="x" class="lichtdoos_link"><img class="lichtdoos_afb" src="{{ $resized.Permalink }}" /></a>
+    {{ end }}
+{{ end }}
+{{ if $gallerij_subtitel }}
+<p class="lichtdoos_subtitle">{{ $gallerij_subtitel }}</p>
+{{ end }}
+</div>
