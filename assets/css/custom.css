@@ -1,1 +1,4 @@
 /* Place custom css here */
+.lichtdoos_afb { display: inline; }
+.lichtdoos_subtitle { text-align: center; font-style: italic; font-size: 0.8em; margin-top: 0px; }
+.header-title a { text-decoration: none; }
