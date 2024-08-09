@@ -11,7 +11,7 @@ I needed support for thumbnails in a blogpost with a click on a thumbnail giving
 In your markdown file, use:
 
 ```
-{{ <gallery title="some title" subtitle="some subtitle" folder="gallery1" > }}
+{{< gallery title="some title" subtitle="some subtitle" folder="gallery1" >}}
 ```
 
 This will add a lightbox with all images in the `gallery1/` folder as thumbnails. The `title` and `subtitle` are optional and allow for adding some text above or below the lightbox.
@@ -19,6 +19,14 @@ This will add a lightbox with all images in the `gallery1/` folder as thumbnails
 ### Clickable site title
 
 The site title can be clicked and refers to the `/` page. I needed this because I have a tendency to click on titles and expect them to lead me to the homepage of a website.
+
+### Subtitles for images
+
+I made a special shortcode, so I can add a visible subtitle to each image:
+
+```
+{{< subtitle text="Your subtitle..." >}}
+```
 
 ### Syntax highlighting
 
